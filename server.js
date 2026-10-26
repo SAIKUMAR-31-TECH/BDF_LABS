@@ -5,14 +5,7 @@ const PORT = 3000;
 
 // GET /
 app.get("/", (request, response) => {
-    const today = new Date();
-
-    const day = String(today.getDate()).padStart(2, "0");
-    const month = String(today.getMonth() + 1).padStart(2, "0");
-    const year = today.getFullYear();
-
-    const formattedDate = `${day}-${month}-${year}`;
-    response.send(formattedDate);
+    response.status(200).send("Welcome to my Lab 1 server!");
 });
 
 // GET /about
