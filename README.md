@@ -10,7 +10,7 @@
 
 ## Live Link
 
-**Deployment URL:** https://bdf-lab-01.vercel.app
+**Deployment URL:** https://backend-development-fundamentals-la-inky.vercel.app/
 
 ## Objective
 
