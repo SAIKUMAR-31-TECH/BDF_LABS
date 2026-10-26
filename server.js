@@ -5,7 +5,14 @@ const PORT = 3000;
 
 // GET /
 app.get("/", (request, response) => {
-    response.status(200).send("Welcome to my Lab 1 server!");
+    const today = new Date();
+
+    const day = String(today.getDate()).padStart(2, "0");
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const year = today.getFullYear();
+
+    const formattedDate = `${day}-${month}-${year}`;
+    response.send(formattedDate);
 });
 
 // GET /about
@@ -18,8 +25,16 @@ app.get("/about", (request, response) => {
 
 // GET /time
 app.get("/time", (request, response) => {
+    const today = new Date();
+
+    const day = String(today.getDate()).padStart(2, "0");
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const year = today.getFullYear();
+
+    const formattedDate = `${day}-${month}-${year}`;
     response.status(200).json({
-        currentDateTime: new Date()
+        date: formattedDate,
+        currentDateTime: today
     });
 });
 
@@ -29,6 +44,10 @@ app.use((request, response) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-    console.log(`Express server running at http://localhost:${PORT}`);
-});
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Express server running at http://localhost:${PORT}`);
+    });
+}
+
+module.exports = app;

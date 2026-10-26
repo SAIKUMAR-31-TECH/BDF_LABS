@@ -82,7 +82,7 @@ Stop the running server with `Ctrl + C` before starting another server on the sa
 
 | Method | Endpoint | Description | Expected Status |
 |---|---|---|---|
-| GET | `/` | Returns a welcome message | 200 OK |
+| GET | `/` | Returns the current date in DD-MM-YYYY format | 200 OK |
 | GET | `/about` | Returns the student's name and section as JSON | 200 OK |
 | GET | `/time` | Returns the current date and time | 200 OK |
 | GET | `/anything` | Demonstrates the response for an unknown route | 404 Not Found |
