@@ -12,7 +12,7 @@ app.get("/", (request, response) => {
 app.get("/about", (request, response) => {
     response.status(200).json({
         name: "NEELA SAI KUMAR",
-        section: "CSE-GEN-AI 2C"
+        section: "CSE-GEN AI -2B"
     });
 });
 

@@ -4,7 +4,7 @@
 
 - **Name:** Neela Sai Kumar
 - **Registration Number:** 252U1R9108
-- **Section:** CSE-GEN-AI 2C 112
+- **Section:** CSE-GEN AI -2B
 - **Course:** Backend Development Fundamentals
 - **Lab Number:** 01
 
