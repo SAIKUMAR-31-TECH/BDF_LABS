@@ -15,4 +15,4 @@ Backend Development Fundamentals Lab Submissions.
 
 | Lab | Description | Directory |
 |---|---|---|
-| Lab 1 | Node.js and Express Server | [lab-01/](./lab-01) |
+| Lab 1 | Node.js and Express Server | [lab1/](./lab1) |
