@@ -1,26 +1,23 @@
 {
-  "name": "lab-02",
+  "name": "lab_02",
   "version": "1.0.0",
-  "description": "Lab 2: SQLite database and CRUD routes",
+  "description": "Lab 2 - Books API using Node.js, Express and SQLite",
   "main": "app.js",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js",
-    "build": "npm rebuild sqlite3 --build-from-source"
+    "dev": "nodemon app.js"
   },
-  "keywords": [
-    "express",
-    "sqlite",
-    "sqlite3",
-    "crud",
-    "rest-api"
-  ],
+  "keywords": [],
   "author": "Neela Sai Kumar",
   "license": "ISC",
+  "type": "commonjs",
   "dependencies": {
     "express": "^5.3.0",
     "sqlite": "^5.1.1",
-    "sqlite3": "^6.0.1"
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
