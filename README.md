@@ -16,3 +16,4 @@ Backend Development Fundamentals Lab Submissions.
 | Lab | Description | Directory |
 |---|---|---|
 | Lab 1 | Node.js and Express Server | [lab1/](./lab1) |
+| Lab 2 | SQLite database and CRUD routes | [lab2/](./lab2) |
