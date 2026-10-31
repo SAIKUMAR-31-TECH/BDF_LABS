@@ -13,9 +13,12 @@
 
 ## Live Deployment
 
-- **Platform:** Render / Persistent Cloud Container
-- **URL:** https://lab-02-qzaj.onrender.com (or local deployment: `http://localhost:3000`)
-- **Note:** SQLite is an embedded file-based database requiring persistent disk storage. On Render/Railway/local machines, the SQLite database (`books.db`) maintains full read and write state.
+- **Platform:** Render (Web Service)
+- **Deployment URL:** https://bdf-labs-yewg.onrender.com/
+- **Live Endpoints:**
+  - Status Check: https://bdf-labs-yewg.onrender.com/
+  - GET All Books: https://bdf-labs-yewg.onrender.com/books/
+  - GET Book by ID: https://bdf-labs-yewg.onrender.com/books/3/
 
 ---
 
