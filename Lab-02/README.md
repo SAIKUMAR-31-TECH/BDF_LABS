@@ -38,8 +38,8 @@ Connect an Express.js server to an embedded SQLite database using `sqlite` and `
 ## Project Structure
 
 ```text
-lab2/
-├── screenshots/
+Lab-02/
+├── screenshorts/
 │   ├── DELETE.png
 │   ├── ERROR.png
 │   ├── GETONE.png
@@ -47,13 +47,13 @@ lab2/
 │   ├── GET_ALL.png
 │   ├── POST.png
 │   └── PUT.png
-├── books.db
-├── generate_screenshots.js
-├── initDb.js
-├── package.json
-├── server.js
 ├── .gitignore
-└── README.md
+├── README.md
+├── app.js
+├── books.SQL
+├── books.db
+├── package-lock.json
+└── package.json
 ```
 
 ---
@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS book (
 ### 1. Navigate to the Lab Folder
 
 ```bash
-cd lab2
+cd Lab-02
 ```
 
 ### 2. Install Dependencies
@@ -111,13 +111,9 @@ Install the required packages (`express`, `sqlite`, `sqlite3`, and dev dependenc
 npm install
 ```
 
-### 3. Initialize / Seed the Database
+### 3. Database Schema
 
-Run the database setup script to create the table and populate initial seed data:
-
-```bash
-npm run init-db
-```
+The database file `books.db` is already created and populated using the SQL definitions in `books.SQL`.
 
 ### 4. Start the Server
 
@@ -128,6 +124,10 @@ npm run dev
 ```
 
 Alternatively, to run directly with Node.js:
+
+```bash
+node app.js
+```
 
 ```bash
 npm start
@@ -184,8 +184,8 @@ No sensitive environment variables are required. For custom deployments:
 
 Postman request to `GET http://localhost:3000/books/` returning HTTP status `200 OK` and a JSON array of all initial books.
 
-![GET All Books](screenshots/GET_ALL.png)
-- [View Screenshot (screenshots/GET_ALL.png)](screenshots/GET_ALL.png)
+![GET All Books](screenshorts/GET_ALL.png)
+- [View Screenshot (screenshorts/GET_ALL.png)](screenshorts/GET_ALL.png)
 
 ---
 
@@ -193,8 +193,8 @@ Postman request to `GET http://localhost:3000/books/` returning HTTP status `200
 
 Postman request to `GET http://localhost:3000/books/3/` returning HTTP status `200 OK` with the book details for ID 3 (*1984* by George Orwell).
 
-![GET Single Book](screenshots/GETONE.png)
-- [View Screenshot (screenshots/GETONE.png)](screenshots/GETONE.png)
+![GET Single Book](screenshorts/GETONE.png)
+- [View Screenshot (screenshorts/GETONE.png)](screenshorts/GETONE.png)
 
 ---
 
@@ -202,8 +202,8 @@ Postman request to `GET http://localhost:3000/books/3/` returning HTTP status `2
 
 Postman request to `POST http://localhost:3000/books/` with JSON payload for *Atomic Habits*, returning HTTP status `201 Created` with `bookId: 11`.
 
-![POST Add Book](screenshots/POST.png)
-- [View Screenshot (screenshots/POST.png)](screenshots/POST.png)
+![POST Add Book](screenshorts/POST.png)
+- [View Screenshot (screenshorts/POST.png)](screenshorts/POST.png)
 
 ---
 
@@ -211,8 +211,8 @@ Postman request to `POST http://localhost:3000/books/` with JSON payload for *At
 
 Postman request to `PUT http://localhost:3000/books/1/` updating title (*Collector Edition*), price (599), and pages (200), returning HTTP status `200 OK` and confirmation message.
 
-![PUT Update Book](screenshots/PUT.png)
-- [View Screenshot (screenshots/PUT.png)](screenshots/PUT.png)
+![PUT Update Book](screenshorts/PUT.png)
+- [View Screenshot (screenshorts/PUT.png)](screenshorts/PUT.png)
 
 ---
 
@@ -220,17 +220,17 @@ Postman request to `PUT http://localhost:3000/books/1/` updating title (*Collect
 
 Postman request to `DELETE http://localhost:3000/books/2/` removing book #2 (*To Kill a Mockingbird*), returning HTTP status `200 OK` and confirmation message.
 
-![DELETE Book](screenshots/DELETE.png)
-- [View Screenshot (screenshots/DELETE.png)](screenshots/DELETE.png)
+![DELETE Book](screenshorts/DELETE.png)
+- [View Screenshot (screenshorts/DELETE.png)](screenshorts/DELETE.png)
 
 ---
 
 ### 6. Error Handling - Book Not Found (`ERROR.png`)
 
-Postman request to `GET http://localhost:3000/books/999/` returning HTTP status `404 Not Found` with `{ "error": "Book with ID 999 not found" }`.
+Postman request to `DELETE http://localhost:3000/books/999/` returning HTTP status `404 Not Found` with `{ "error": "Book with ID 999 not found" }`.
 
-![Error Handling](screenshots/ERROR.png)
-- [View Screenshot (screenshots/ERROR.png)](screenshots/ERROR.png)
+![Error Handling](screenshorts/ERROR.png)
+- [View Screenshot (screenshorts/ERROR.png)](screenshorts/ERROR.png)
 
 ---
 
@@ -238,8 +238,8 @@ Postman request to `GET http://localhost:3000/books/999/` returning HTTP status 
 
 Postman request to `GET http://localhost:3000/books/` after CRUD modifications, confirming book ID 1 updated, book ID 2 removed, and book ID 11 added.
 
-![GET All Books Updated](screenshots/GET_ALL%20.png)
-- [View Screenshot (screenshots/GET_ALL .png)](screenshots/GET_ALL%20.png)
+![GET All Books Updated](screenshorts/GET_ALL%20.png)
+- [View Screenshot (screenshorts/GET_ALL .png)](screenshorts/GET_ALL%20.png)
 
 ---
 
