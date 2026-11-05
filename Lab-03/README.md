@@ -10,6 +10,21 @@
 - Term: II
 - Faculty: Joel Prashanth D.
 
+---
+
+## Live Deployment
+
+- **Platform:** Render (Web Service)
+- **Deployment URL:** https://lab3-zc11.onrender.com/
+- **Live Endpoints:**
+  - GET All Books: https://lab3-zc11.onrender.com/books
+  - Search Books: https://lab3-zc11.onrender.com/books?search_q=atomic
+  - Sort by Price: https://lab3-zc11.onrender.com/books?order_by=price&order=ASC
+  - Pagination: https://lab3-zc11.onrender.com/books?limit=5&offset=0
+  - Price Filter: https://lab3-zc11.onrender.com/books?min_price=200&max_price=400
+
+---
+
 ## 1. Objective
 
 To develop a REST API using Node.js, Express.js and SQLite. This lab demonstrates CRUD operations, query parameters, filtering, sorting, pagination, input validation and error handling.
